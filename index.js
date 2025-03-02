@@ -23,7 +23,7 @@ const {
 
 const { TelegraPh, UploadFileUgu } = require("./lib/toUrl");
 const uploadtoimgur = require("./lib/Imgur");
-const fancy = require("./lib/style");
+
 const { sendReply, sendMediaMessage } = require("./lib/context");
 const ytmp3 = require("./lib/ytmp3");
 const path = require("path");
