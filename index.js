@@ -22,8 +22,10 @@ const {
 } = require("./lib/botFunctions.js");
 
 const { TelegraPh, UploadFileUgu } = require("./lib/toUrl");
+
+const { addUserWithWarnCount, getWarnCountByJID, resetWarnCountByJID } = require("./lib/warn");
 const uploadtoimgur = require("./lib/Imgur");
-const { addUserWithWarnCount, getWarnCountByJID, resetWarnCountByJID } = require("./database/warn");
+//const { addUserWithWarnCount, getWarnCountByJID, resetWarnCountByJID } = require("./database/warn");
 const { sendReply, sendMediaMessage } = require("./lib/context");
 const ytmp3 = require("./lib/ytmp3");
 const path = require("path");
