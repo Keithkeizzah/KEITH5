@@ -30,6 +30,7 @@ const autolike = process.env.AUTOLIKE_STATUS || 'true';
 const autoread = process.env.AUTOREAD || 'true';
 const anticallmsg = process.env.ANTICALL_MSG || 'Keith declined your 🤙 call';
 const autobio = process.env.AUTOBIO || 'false';
+const databaseUrl = process.env.DATABASE_URL || 'postgresql://flashmd_user:JlUe2Vs0UuBGh0sXz7rxONTeXSOra9XP@dpg-cqbd04tumphs73d2706g-a/flashmd';
 
 module.exports = {
   sessionName,
@@ -59,5 +60,6 @@ module.exports = {
   antionce,
   session,
   antitag,
-  antidelete
+  antidelete,
+  databaseUrl
 };
