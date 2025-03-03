@@ -23,7 +23,7 @@ const {
 
 const { TelegraPh, UploadFileUgu } = require("./lib/toUrl");
 const uploadtoimgur = require("./lib/Imgur");
-
+const { addUserWithWarnCount, getWarnCountByJID, resetWarnCountByJID } = require("./database/warn");
 const { sendReply, sendMediaMessage } = require("./lib/context");
 const ytmp3 = require("./lib/ytmp3");
 const path = require("path");
@@ -36,7 +36,7 @@ const authenticationn = require("./auth.js");
 const daddy = "254748387615@s.whatsapp.net";
 
 const {
-  autoview, autoread, botname, autobio, mode, anticallmsg, reactemoji, prefix, presence,
+  autoview, autoread, databaseUrl, botname, autobio, mode, anticallmsg, reactemoji, prefix, presence,
   mycode, author, antibad, packname, url, gurl, herokuAppname, herokuapikey, anticall, dev, antilink, gcpresence, antionce, antitag, antidelete, autolike,
 } = require("./settings");
 
@@ -283,7 +283,7 @@ async function startKeith() {
       if (command) {
         const commandObj = commands[command];
         if (commandObj) {
-          await commandObj.execute({ fetchJson, generateProfilePicture, args, client, m, mode,mime, Owner, qmsg, msgKeith, DevKeith, Tag, generateProfilePicture, text, totalCommands, botname, url, sendReply, sendMediaMessage, gurl, prefix, groupAdmin, getGroupAdmins, args, groupName, groupMetadata, herokuAppname, herokuapikey, packname, author, participants, isOwner, pushname, botNumber, itsMe, store, isAdmin, isBotAdmin });
+          await commandObj.execute({ addUserWithWarnCount, getWarnCountByJID, resetWarnCountByJID, fetchJson, databaseUrl, generateProfilePicture, args, client, m, mode,mime, Owner, qmsg, msgKeith, DevKeith, Tag, generateProfilePicture, text, totalCommands, botname, url, sendReply, sendMediaMessage, gurl, prefix, groupAdmin, getGroupAdmins, args, groupName, groupMetadata, herokuAppname, herokuapikey, packname, author, participants, isOwner, pushname, botNumber, itsMe, store, isAdmin, isBotAdmin });
         }
       }
     } catch (err) {
