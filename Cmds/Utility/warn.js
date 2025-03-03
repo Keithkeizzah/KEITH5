@@ -1,9 +1,9 @@
-const { addUserWithWarnCount, getWarnCountByJID, resetWarnCountByJID } = require(__dirname + "/../../database/warn");
+
 const middleware = require('../../utility/botUtil/middleware');
 
 module.exports = async (context) => {
   await middleware(context, async () => {
-    const { client, m, text, args } = context;
+    const { client, m, text, args, addUserWithWarnCount, getWarnCountByJID, resetWarnCountByJID } = context;
     const authorReplied = m.quoted ? m.quoted.participant : m.sender;
     const warnLimit = 3;
 
